@@ -110,7 +110,7 @@ const Test = () => {
               {habits[selectedHabitIndex].name}
             </h2>
 
-            {/* Calendar View */}
+           
             <div className="grid grid-cols-7 gap-2 my-5">
               {daysInMonth.map((date, dayIndex) => (
                 <div key={dayIndex} className="text-center">

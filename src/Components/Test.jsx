@@ -27,7 +27,7 @@ const Test = () => {
           name: newHabit,
           progress: 0,
           completedDays: new Array(daysInMonth.length).fill(false),
-          isActive: false, // Track whether the habit is active
+          isActive: false,
         },
       ]);
       setNewHabit("");
@@ -64,7 +64,7 @@ const Test = () => {
     <div>
       <h1 className="mb-5 font-bold underline text-center text-3xl">Habit Tracker</h1>
 
-      {/* Add Habit Input */}
+    
       <div className="flex justify-center mb-5">
         <input
           type="text"
@@ -81,7 +81,7 @@ const Test = () => {
         </button>
       </div>
 
-      {/* Habit List Section */}
+     
       <div className="border-2 border-black rounded-2xl w-60 p-2 mb-5 mx-auto">
         <h1 className="font-bold underline text-center mb-3">Habit List</h1>
         <ul>
@@ -95,7 +95,7 @@ const Test = () => {
                 type="checkbox"
                 checked={habit.isActive}
                 onChange={() => toggleHabitActive(index)}
-                onClick={(e) => e.stopPropagation()} // Prevent parent click
+                onClick={(e) => e.stopPropagation()}
               />
               <span>{habit.name}</span>
             </li>
@@ -103,7 +103,6 @@ const Test = () => {
         </ul>
       </div>
 
-      {/* Selected Habit Details */}
       {selectedHabitIndex !== null &&
         habits[selectedHabitIndex]?.isActive && (
           <div className="mb-10 border-2 border-black rounded-2xl p-5">
@@ -126,7 +125,7 @@ const Test = () => {
               ))}
             </div>
 
-            {/* Progress Bar */}
+        
             <div>
               <label className="block mb-2">Progress:</label>
               <div className="relative w-full h-4 bg-gray-300 rounded">
